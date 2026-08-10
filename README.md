@@ -44,47 +44,63 @@ Entry format:
   - Keywords: ...
 ```
 
+Larger sections are split into:
+
+- **Foundational** — the small set of landmark papers that define the sub-field. This
+  sub-list rarely changes and is not date-ordered.
+- **Recent** — everything else, ordered **newest first**. A
+  ![Highlight](https://img.shields.io/badge/-Highlight-blue) badge marks papers the
+  maintainers consider especially significant, without implying it is the only
+  important one — badge placement is a human editorial call, not a benchmark claim.
+
 ## Protein Structure Prediction
+
+### Foundational
 
 - [Highly accurate protein structure prediction with AlphaFold](https://www.nature.com/articles/s41586-021-03819-2) [code](https://github.com/google-deepmind/alphafold)
   - Jumper et al. · Google DeepMind · Nature 2021
   - Keywords: structure prediction, Evoformer, MSA
-- [Accurate structure prediction of biomolecular interactions with AlphaFold3](https://www.nature.com/articles/s41586-024-07487-w) [code](https://github.com/google-deepmind/alphafold3)
-  - Abramson et al. · Google DeepMind & Isomorphic Labs · Nature 2024
-  - Keywords: diffusion, biomolecular complexes
-- [Language models of protein sequences at the scale of evolution enable accurate structure prediction (ESMFold)](https://www.biorxiv.org/content/10.1101/2022.07.20.500902) [code](https://github.com/facebookresearch/esm)
-  - Lin et al. · Meta AI (FAIR) · bioRxiv 2022
-  - Keywords: protein language model, single-sequence folding
-- [ColabFold: Making protein folding accessible to all](https://www.nature.com/articles/s41592-022-01488-1) [code](https://github.com/sokrypton/ColabFold)
-  - Mirdita et al. · Seoul National University & Harvard Medical School · Nature Methods 2022
-  - Keywords: accessible inference, MSA search, notebooks
 - [RoseTTAFold: Accurate prediction of protein structures and interactions using a three-track network](https://www.science.org/doi/10.1126/science.abj8754) [code](https://github.com/RosettaCommons/RoseTTAFold)
   - Baek et al. · University of Washington (Baker Lab) · Science 2021
   - Keywords: three-track network, structure prediction
+
+### Recent
+
+- ![Highlight](https://img.shields.io/badge/-Highlight-blue) [Accurate structure prediction of biomolecular interactions with AlphaFold3](https://www.nature.com/articles/s41586-024-07487-w) [code](https://github.com/google-deepmind/alphafold3)
+  - Abramson et al. · Google DeepMind & Isomorphic Labs · Nature 2024
+  - Keywords: diffusion, biomolecular complexes
 - [OpenFold: Retraining AlphaFold2 yields new insights into its learning mechanisms](https://www.nature.com/articles/s41592-024-02272-z) [code](https://github.com/aqlaboratory/openfold)
   - Ahdritz et al. · Columbia University · Nature Methods 2024
   - Keywords: open reimplementation, trainable
+- [ColabFold: Making protein folding accessible to all](https://www.nature.com/articles/s41592-022-01488-1) [code](https://github.com/sokrypton/ColabFold)
+  - Mirdita et al. · Seoul National University & Harvard Medical School · Nature Methods 2022
+  - Keywords: accessible inference, MSA search, notebooks
+- [Language models of protein sequences at the scale of evolution enable accurate structure prediction (ESMFold)](https://www.biorxiv.org/content/10.1101/2022.07.20.500902) [code](https://github.com/facebookresearch/esm)
+  - Lin et al. · Meta AI (FAIR) · bioRxiv 2022
+  - Keywords: protein language model, single-sequence folding
 
 ## Protein & Binder/Antibody Design
 
-- [Broadly applicable and accurate protein design by integrating structure prediction networks and diffusion generative models (RFdiffusion)](https://www.biorxiv.org/content/10.1101/2022.12.09.519842) [code](https://github.com/RosettaCommons/RFdiffusion)
-  - Watson et al. · University of Washington (Baker Lab) · Nature 2023
-  - Keywords: diffusion, de novo binder design, scaffolding
+### Foundational
+
 - [Robust deep learning-based protein sequence design using ProteinMPNN](https://www.science.org/doi/10.1126/science.add2187) [code](https://github.com/dauparas/ProteinMPNN)
   - Dauparas et al. · University of Washington (Baker Lab) · Science 2022
   - Keywords: fixed-backbone sequence design, message passing
 - [De novo design of protein structure and function with RFdiffusion](https://www.nature.com/articles/s41586-023-06415-8) [code](https://github.com/RosettaCommons/RFdiffusion)
-  - Watson et al. · University of Washington (Baker Lab) · Nature 2023
-  - Keywords: motif scaffolding, symmetric design, binders
-- [Design of protein-binding proteins from the target structure alone](https://www.nature.com/articles/s41586-022-04654-9)
-  - Cao et al. · University of Washington (Baker Lab) · Nature 2022
-  - Keywords: target-only binder design, de novo binders
+  - Watson et al. · University of Washington (Baker Lab) · Nature 2023 (preprint: [bioRxiv 2022](https://www.biorxiv.org/content/10.1101/2022.12.09.519842))
+  - Keywords: diffusion, de novo binder design, scaffolding, motif scaffolding
+
+### Recent
+
+- [BoltzGen: generative modeling for biomolecular design](https://github.com/HannesStark/boltzgen) [code](https://github.com/HannesStark/boltzgen)
+  - Stärk et al. · MIT · 2025
+  - Keywords: generative model, binder/complex design
 - [Boltz-1: Democratizing biomolecular interaction modeling](https://github.com/jwohlwend/boltz) [code](https://github.com/jwohlwend/boltz)
   - Wohlwend et al. · MIT (Jameel Clinic) · 2024
   - Keywords: open-source AlphaFold3-class model, complex prediction
-- [BoltzGen: generative modeling for biomolecular design](https://github.com/HannesStark/boltzgen) [code](https://github.com/HannesStark/boltzgen)
-  - Stärk et al. · MIT
-  - Keywords: generative model, binder/complex design
+- [Design of protein-binding proteins from the target structure alone](https://www.nature.com/articles/s41586-022-04654-9)
+  - Cao et al. · University of Washington (Baker Lab) · Nature 2022
+  - Keywords: target-only binder design, de novo binders
 - [Conditional Antibody Design as 3D Equivariant Graph Translation](https://arxiv.org/abs/2208.06073)
   - Kong et al. · Tsinghua University · NeurIPS 2022
   - Keywords: antibody design, graph translation, CDR generation
@@ -94,36 +110,51 @@ Entry format:
 
 ## Molecular Generation & Drug Discovery
 
-- [Accelerated antimicrobial discovery via deep generative models and molecular dynamics simulations](https://www.nature.com/articles/s41551-021-00689-x)
-  - Das et al. · IBM Research · Nature Biomedical Engineering 2021
-  - Keywords: generative autoencoder, antimicrobial peptides
+### Foundational
+
 - [Equivariant diffusion for molecule generation in 3D (EDM)](https://arxiv.org/abs/2203.17003) [code](https://github.com/ehoogeboom/e3_diffusion_for_molecules)
   - Hoogeboom et al. · University of Amsterdam · ICML 2022
   - Keywords: 3D diffusion, equivariance, molecule generation
+
+### Recent
+
 - [Molecule Generation For Target Protein Binding with Structural Motifs](https://openreview.net/forum?id=Rq13idF0F73)
   - Zhang et al. · Shanghai Jiao Tong University · ICLR 2023
   - Keywords: structure-based drug design, fragment generation
+- [Accelerated antimicrobial discovery via deep generative models and molecular dynamics simulations](https://www.nature.com/articles/s41551-021-00689-x)
+  - Das et al. · IBM Research · Nature Biomedical Engineering 2021
+  - Keywords: generative autoencoder, antimicrobial peptides
 
 ## Genomics / DNA & RNA Foundation Models
+
+### Foundational
 
 - [DNABERT: pre-trained Bidirectional Encoder Representations from Transformers model for DNA-language](https://academic.oup.com/bioinformatics/article/37/15/2112/6128680) [code](https://github.com/jerryji1993/DNABERT)
   - Ji et al. · Northwestern University & Stony Brook University · Bioinformatics 2021
   - Keywords: DNA language model, genome representation
+
+### Recent
+
+- ![Highlight](https://img.shields.io/badge/-Highlight-blue) [Evo: DNA foundation modeling from molecular to genome scale](https://www.science.org/doi/10.1126/science.ado9336) [code](https://github.com/evo-design/evo)
+  - Nguyen et al. · Arc Institute & Stanford University · Science 2024
+  - Keywords: long-context genomic model, generative DNA design
 - [The Nucleotide Transformer: building and evaluating robust genomic foundation models](https://www.nature.com/articles/s41592-024-02523-z) [code](https://github.com/instadeepai/nucleotide-transformer)
   - Dalla-Torre et al. · InstaDeep (with NVIDIA & TU Munich) · Nature Methods 2024
   - Keywords: genomic foundation model, transformer
-- [Evo: DNA foundation modeling from molecular to genome scale](https://www.science.org/doi/10.1126/science.ado9336) [code](https://github.com/evo-design/evo)
-  - Nguyen et al. · Arc Institute & Stanford University · Science 2024
-  - Keywords: long-context genomic model, generative DNA design
 
 ## Single-Cell & Omics Foundation Models
+
+### Foundational
+
+- [Geneformer: transfer learning enables predictions in network biology](https://www.nature.com/articles/s41586-023-06139-9) [code](https://huggingface.co/ctheodoris/Geneformer)
+  - Theodoris et al. · Harvard Medical School & Boston Children's Hospital · Nature 2023
+  - Keywords: gene network, transfer learning, single-cell
+
+### Recent
 
 - [scGPT: toward building a foundation model for single-cell multi-omics using generative AI](https://www.nature.com/articles/s41592-024-02201-0) [code](https://github.com/bowang-lab/scGPT)
   - Cui et al. · University of Toronto · Nature Methods 2024
   - Keywords: single-cell, generative pretraining, multi-omics
-- [Geneformer: transfer learning enables predictions in network biology](https://www.nature.com/articles/s41586-023-06139-9) [code](https://huggingface.co/ctheodoris/Geneformer)
-  - Theodoris et al. · Harvard Medical School & Boston Children's Hospital · Nature 2023
-  - Keywords: gene network, transfer learning, single-cell
 
 ## Multi-modal / Foundation Models for Biology
 
