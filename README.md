@@ -39,65 +39,56 @@ Contributions welcome — see [CONTRIBUTING.md](CONTRIBUTING.md).
 Entry format:
 
 ```
-- [Title](link) [code](code-link)
+- [Title](link) [code](code-link) ![Stars](https://img.shields.io/github/stars/owner/repo?style=flat&label=)
   - Authors · Institution/Company · Venue/Year
   - Keywords: ...
 ```
 
-Larger sections are split into:
-
-- **Foundational** — the small set of landmark papers that define the sub-field. This
-  sub-list rarely changes and is not date-ordered.
-- **Recent** — everything else, ordered **newest first**. A
-  ![Highlight](https://img.shields.io/badge/-Highlight-blue) badge marks papers the
-  maintainers consider especially significant, without implying it is the only
-  important one — badge placement is a human editorial call, not a benchmark claim.
+Papers are listed **newest first** within each section. A
+![Highlight](https://img.shields.io/badge/-Highlight-blue) badge marks papers
+the maintainers consider especially significant — landmark, field-defining,
+or otherwise a must-read — without implying it is the *only* important paper
+in the section. Badge placement is a human editorial call, not a benchmark
+claim, and can be proposed/discussed via PR.
 
 ## Protein Structure Prediction
 
-### Foundational
-
-- [Highly accurate protein structure prediction with AlphaFold](https://www.nature.com/articles/s41586-021-03819-2) [code](https://github.com/google-deepmind/alphafold)
+- [SimpleFold: Folding Proteins is Simpler than You Think](https://arxiv.org/abs/2509.18480) [code](https://github.com/apple/ml-simplefold) ![Stars](https://img.shields.io/github/stars/apple/ml-simplefold?style=flat&label=)
+  - Wang et al. · Apple · arXiv 2025
+  - Keywords: flow matching, transformer-only, no triangle attention
+- ![Highlight](https://img.shields.io/badge/-Highlight-blue) [Accurate structure prediction of biomolecular interactions with AlphaFold3](https://www.nature.com/articles/s41586-024-07487-w) [code](https://github.com/google-deepmind/alphafold3) ![Stars](https://img.shields.io/github/stars/google-deepmind/alphafold3?style=flat&label=)
+  - Abramson et al. · Google DeepMind & Isomorphic Labs · Nature 2024
+  - Keywords: diffusion, biomolecular complexes
+- [OpenFold: Retraining AlphaFold2 yields new insights into its learning mechanisms](https://www.nature.com/articles/s41592-024-02272-z) [code](https://github.com/aqlaboratory/openfold) ![Stars](https://img.shields.io/github/stars/aqlaboratory/openfold?style=flat&label=)
+  - Ahdritz et al. · Columbia University · Nature Methods 2024
+  - Keywords: open reimplementation, trainable
+- ![Highlight](https://img.shields.io/badge/-Highlight-blue) [ColabFold: Making protein folding accessible to all](https://www.nature.com/articles/s41592-022-01488-1) [code](https://github.com/sokrypton/ColabFold) ![Stars](https://img.shields.io/github/stars/sokrypton/ColabFold?style=flat&label=)
+  - Mirdita et al. · Seoul National University & Harvard Medical School · Nature Methods 2022
+  - Keywords: accessible inference, MSA search, notebooks
+- [Language models of protein sequences at the scale of evolution enable accurate structure prediction (ESMFold)](https://www.biorxiv.org/content/10.1101/2022.07.20.500902) [code](https://github.com/facebookresearch/esm) ![Stars](https://img.shields.io/github/stars/facebookresearch/esm?style=flat&label=)
+  - Lin et al. · Meta AI (FAIR) · bioRxiv 2022
+  - Keywords: protein language model, single-sequence folding
+- ![Highlight](https://img.shields.io/badge/-Highlight-blue) [Highly accurate protein structure prediction with AlphaFold](https://www.nature.com/articles/s41586-021-03819-2) [code](https://github.com/google-deepmind/alphafold) ![Stars](https://img.shields.io/github/stars/google-deepmind/alphafold?style=flat&label=)
   - Jumper et al. · Google DeepMind · Nature 2021
   - Keywords: structure prediction, Evoformer, MSA
-- [RoseTTAFold: Accurate prediction of protein structures and interactions using a three-track network](https://www.science.org/doi/10.1126/science.abj8754) [code](https://github.com/RosettaCommons/RoseTTAFold)
+- ![Highlight](https://img.shields.io/badge/-Highlight-blue) [RoseTTAFold: Accurate prediction of protein structures and interactions using a three-track network](https://www.science.org/doi/10.1126/science.abj8754) [code](https://github.com/RosettaCommons/RoseTTAFold) ![Stars](https://img.shields.io/github/stars/RosettaCommons/RoseTTAFold?style=flat&label=)
   - Baek et al. · University of Washington (Baker Lab) · Science 2021
   - Keywords: three-track network, structure prediction
 
-### Recent
-
-- ![Highlight](https://img.shields.io/badge/-Highlight-blue) [Accurate structure prediction of biomolecular interactions with AlphaFold3](https://www.nature.com/articles/s41586-024-07487-w) [code](https://github.com/google-deepmind/alphafold3)
-  - Abramson et al. · Google DeepMind & Isomorphic Labs · Nature 2024
-  - Keywords: diffusion, biomolecular complexes
-- [OpenFold: Retraining AlphaFold2 yields new insights into its learning mechanisms](https://www.nature.com/articles/s41592-024-02272-z) [code](https://github.com/aqlaboratory/openfold)
-  - Ahdritz et al. · Columbia University · Nature Methods 2024
-  - Keywords: open reimplementation, trainable
-- [ColabFold: Making protein folding accessible to all](https://www.nature.com/articles/s41592-022-01488-1) [code](https://github.com/sokrypton/ColabFold)
-  - Mirdita et al. · Seoul National University & Harvard Medical School · Nature Methods 2022
-  - Keywords: accessible inference, MSA search, notebooks
-- [Language models of protein sequences at the scale of evolution enable accurate structure prediction (ESMFold)](https://www.biorxiv.org/content/10.1101/2022.07.20.500902) [code](https://github.com/facebookresearch/esm)
-  - Lin et al. · Meta AI (FAIR) · bioRxiv 2022
-  - Keywords: protein language model, single-sequence folding
-
 ## Protein & Binder/Antibody Design
 
-### Foundational
-
-- [Robust deep learning-based protein sequence design using ProteinMPNN](https://www.science.org/doi/10.1126/science.add2187) [code](https://github.com/dauparas/ProteinMPNN)
-  - Dauparas et al. · University of Washington (Baker Lab) · Science 2022
-  - Keywords: fixed-backbone sequence design, message passing
-- [De novo design of protein structure and function with RFdiffusion](https://www.nature.com/articles/s41586-023-06415-8) [code](https://github.com/RosettaCommons/RFdiffusion)
-  - Watson et al. · University of Washington (Baker Lab) · Nature 2023 (preprint: [bioRxiv 2022](https://www.biorxiv.org/content/10.1101/2022.12.09.519842))
-  - Keywords: diffusion, de novo binder design, scaffolding, motif scaffolding
-
-### Recent
-
-- [BoltzGen: generative modeling for biomolecular design](https://github.com/HannesStark/boltzgen) [code](https://github.com/HannesStark/boltzgen)
+- [BoltzGen: generative modeling for biomolecular design](https://github.com/HannesStark/boltzgen) [code](https://github.com/HannesStark/boltzgen) ![Stars](https://img.shields.io/github/stars/HannesStark/boltzgen?style=flat&label=)
   - Stärk et al. · MIT · 2025
   - Keywords: generative model, binder/complex design
-- [Boltz-1: Democratizing biomolecular interaction modeling](https://github.com/jwohlwend/boltz) [code](https://github.com/jwohlwend/boltz)
+- [Boltz-1: Democratizing biomolecular interaction modeling](https://github.com/jwohlwend/boltz) [code](https://github.com/jwohlwend/boltz) ![Stars](https://img.shields.io/github/stars/jwohlwend/boltz?style=flat&label=)
   - Wohlwend et al. · MIT (Jameel Clinic) · 2024
   - Keywords: open-source AlphaFold3-class model, complex prediction
+- ![Highlight](https://img.shields.io/badge/-Highlight-blue) [De novo design of protein structure and function with RFdiffusion](https://www.nature.com/articles/s41586-023-06415-8) [code](https://github.com/RosettaCommons/RFdiffusion) ![Stars](https://img.shields.io/github/stars/RosettaCommons/RFdiffusion?style=flat&label=)
+  - Watson et al. · University of Washington (Baker Lab) · Nature 2023 (preprint: [bioRxiv 2022](https://www.biorxiv.org/content/10.1101/2022.12.09.519842))
+  - Keywords: diffusion, de novo binder design, scaffolding, motif scaffolding
+- ![Highlight](https://img.shields.io/badge/-Highlight-blue) [Robust deep learning-based protein sequence design using ProteinMPNN](https://www.science.org/doi/10.1126/science.add2187) [code](https://github.com/dauparas/ProteinMPNN) ![Stars](https://img.shields.io/github/stars/dauparas/ProteinMPNN?style=flat&label=)
+  - Dauparas et al. · University of Washington (Baker Lab) · Science 2022
+  - Keywords: fixed-backbone sequence design, message passing
 - [Design of protein-binding proteins from the target structure alone](https://www.nature.com/articles/s41586-022-04654-9)
   - Cao et al. · University of Washington (Baker Lab) · Nature 2022
   - Keywords: target-only binder design, de novo binders
@@ -110,55 +101,40 @@ Larger sections are split into:
 
 ## Molecular Generation & Drug Discovery
 
-### Foundational
-
-- [Equivariant diffusion for molecule generation in 3D (EDM)](https://arxiv.org/abs/2203.17003) [code](https://github.com/ehoogeboom/e3_diffusion_for_molecules)
-  - Hoogeboom et al. · University of Amsterdam · ICML 2022
-  - Keywords: 3D diffusion, equivariance, molecule generation
-
-### Recent
-
 - [Molecule Generation For Target Protein Binding with Structural Motifs](https://openreview.net/forum?id=Rq13idF0F73)
   - Zhang et al. · Shanghai Jiao Tong University · ICLR 2023
   - Keywords: structure-based drug design, fragment generation
+- ![Highlight](https://img.shields.io/badge/-Highlight-blue) [Equivariant diffusion for molecule generation in 3D (EDM)](https://arxiv.org/abs/2203.17003) [code](https://github.com/ehoogeboom/e3_diffusion_for_molecules) ![Stars](https://img.shields.io/github/stars/ehoogeboom/e3_diffusion_for_molecules?style=flat&label=)
+  - Hoogeboom et al. · University of Amsterdam · ICML 2022
+  - Keywords: 3D diffusion, equivariance, molecule generation
 - [Accelerated antimicrobial discovery via deep generative models and molecular dynamics simulations](https://www.nature.com/articles/s41551-021-00689-x)
   - Das et al. · IBM Research · Nature Biomedical Engineering 2021
   - Keywords: generative autoencoder, antimicrobial peptides
 
 ## Genomics / DNA & RNA Foundation Models
 
-### Foundational
-
-- [DNABERT: pre-trained Bidirectional Encoder Representations from Transformers model for DNA-language](https://academic.oup.com/bioinformatics/article/37/15/2112/6128680) [code](https://github.com/jerryji1993/DNABERT)
+- ![Highlight](https://img.shields.io/badge/-Highlight-blue) [Evo: DNA foundation modeling from molecular to genome scale](https://www.science.org/doi/10.1126/science.ado9336) [code](https://github.com/evo-design/evo) ![Stars](https://img.shields.io/github/stars/evo-design/evo?style=flat&label=)
+  - Nguyen et al. · Arc Institute & Stanford University · Science 2024
+  - Keywords: long-context genomic model, generative DNA design
+- [The Nucleotide Transformer: building and evaluating robust genomic foundation models](https://www.nature.com/articles/s41592-024-02523-z) [code](https://github.com/instadeepai/nucleotide-transformer) ![Stars](https://img.shields.io/github/stars/instadeepai/nucleotide-transformer?style=flat&label=)
+  - Dalla-Torre et al. · InstaDeep (with NVIDIA & TU Munich) · Nature Methods 2024
+  - Keywords: genomic foundation model, transformer
+- ![Highlight](https://img.shields.io/badge/-Highlight-blue) [DNABERT: pre-trained Bidirectional Encoder Representations from Transformers model for DNA-language](https://academic.oup.com/bioinformatics/article/37/15/2112/6128680) [code](https://github.com/jerryji1993/DNABERT) ![Stars](https://img.shields.io/github/stars/jerryji1993/DNABERT?style=flat&label=)
   - Ji et al. · Northwestern University & Stony Brook University · Bioinformatics 2021
   - Keywords: DNA language model, genome representation
 
-### Recent
-
-- ![Highlight](https://img.shields.io/badge/-Highlight-blue) [Evo: DNA foundation modeling from molecular to genome scale](https://www.science.org/doi/10.1126/science.ado9336) [code](https://github.com/evo-design/evo)
-  - Nguyen et al. · Arc Institute & Stanford University · Science 2024
-  - Keywords: long-context genomic model, generative DNA design
-- [The Nucleotide Transformer: building and evaluating robust genomic foundation models](https://www.nature.com/articles/s41592-024-02523-z) [code](https://github.com/instadeepai/nucleotide-transformer)
-  - Dalla-Torre et al. · InstaDeep (with NVIDIA & TU Munich) · Nature Methods 2024
-  - Keywords: genomic foundation model, transformer
-
 ## Single-Cell & Omics Foundation Models
 
-### Foundational
-
-- [Geneformer: transfer learning enables predictions in network biology](https://www.nature.com/articles/s41586-023-06139-9) [code](https://huggingface.co/ctheodoris/Geneformer)
+- [scGPT: toward building a foundation model for single-cell multi-omics using generative AI](https://www.nature.com/articles/s41592-024-02201-0) [code](https://github.com/bowang-lab/scGPT) ![Stars](https://img.shields.io/github/stars/bowang-lab/scGPT?style=flat&label=)
+  - Cui et al. · University of Toronto · Nature Methods 2024
+  - Keywords: single-cell, generative pretraining, multi-omics
+- ![Highlight](https://img.shields.io/badge/-Highlight-blue) [Geneformer: transfer learning enables predictions in network biology](https://www.nature.com/articles/s41586-023-06139-9) [code](https://huggingface.co/ctheodoris/Geneformer)
   - Theodoris et al. · Harvard Medical School & Boston Children's Hospital · Nature 2023
   - Keywords: gene network, transfer learning, single-cell
 
-### Recent
-
-- [scGPT: toward building a foundation model for single-cell multi-omics using generative AI](https://www.nature.com/articles/s41592-024-02201-0) [code](https://github.com/bowang-lab/scGPT)
-  - Cui et al. · University of Toronto · Nature Methods 2024
-  - Keywords: single-cell, generative pretraining, multi-omics
-
 ## Multi-modal / Foundation Models for Biology
 
-- [ESM3: Simulating 500 million years of evolution with a language model](https://www.science.org/doi/10.1126/science.ado9336) [code](https://github.com/evolutionaryscale/esm)
+- ![Highlight](https://img.shields.io/badge/-Highlight-blue) [ESM3: Simulating 500 million years of evolution with a language model](https://www.science.org/doi/10.1126/science.ado9336) [code](https://github.com/evolutionaryscale/esm) ![Stars](https://img.shields.io/github/stars/evolutionaryscale/esm?style=flat&label=)
   - Hayes et al. · EvolutionaryScale · Science 2025
   - Keywords: multimodal, sequence-structure-function, generative
 
@@ -173,10 +149,10 @@ Larger sections are split into:
 
 ## Tools, Libraries & Servers
 
-- [PyMOL](https://pymol.org/) — molecular visualization
-- [ChimeraX](https://www.cgl.ucsf.edu/chimerax/) — molecular visualization
-- [Biotite](https://github.com/biotite-dev/biotite) — computational structural biology library
-- [BioPython](https://github.com/biopython/biopython) — general bioinformatics toolkit
+- [PyMOL](https://pymol.org/) [code](https://github.com/schrodinger/pymol-open-source) ![Stars](https://img.shields.io/github/stars/schrodinger/pymol-open-source?style=flat&label=) — molecular visualization
+- [ChimeraX](https://www.cgl.ucsf.edu/chimerax/) [code](https://github.com/RBVI/ChimeraX) ![Stars](https://img.shields.io/github/stars/RBVI/ChimeraX?style=flat&label=) — molecular visualization
+- [Biotite](https://github.com/biotite-dev/biotite) [code](https://github.com/biotite-dev/biotite) ![Stars](https://img.shields.io/github/stars/biotite-dev/biotite?style=flat&label=) — computational structural biology library
+- [BioPython](https://github.com/biopython/biopython) [code](https://github.com/biopython/biopython) ![Stars](https://img.shields.io/github/stars/biopython/biopython?style=flat&label=) — general bioinformatics toolkit
 
 ## Labs, Companies & Communities
 

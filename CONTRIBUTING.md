@@ -8,12 +8,8 @@ Thanks for helping make this the go-to list for AI-driven digital biology! 🎉
    automated/bot PRs only.
 2. **Search first** — make sure the resource isn't already listed.
 3. **Follow the entry format** exactly (see below).
-4. Add entries to the correct sub-section:
-   - **Foundational** — only for the small set of landmark papers that define
-     the sub-field. Please open an issue before adding here; this list is
-     meant to stay short and stable.
-   - **Recent** — everything else, ordered **newest first** (most recently
-     published at the top).
+4. Add each entry to the correct section, ordered **newest first** (most
+   recently published paper at the top).
 5. The resource should be **relevant, high quality, and either has code, a
    dataset, or a notable publication** behind it. We do not list low-effort
    blog posts, unpublished/uncited preprints with no code, or promotional
@@ -23,24 +19,28 @@ Thanks for helping make this the go-to list for AI-driven digital biology! 🎉
 ## Entry format
 
 ```
-- [Title](paper-or-repo-link) [code](code-link-if-different)
+- [Title](paper-or-repo-link) [code](code-link-if-different) ![Stars](https://img.shields.io/github/stars/owner/repo?style=flat&label=)
   - Authors (first author et al.) · Institution/Company · Venue/Year
   - Keywords: keyword1, keyword2, keyword3
 ```
 
+The `![Stars]` badge is optional but recommended whenever the resource has a
+public GitHub repo — use the shields.io dynamic badge (`?style=flat&label=`)
+so the count stays up to date automatically; don't hardcode a star number.
+
 Example:
 
 ```
-- [Robust deep learning-based protein sequence design using ProteinMPNN](https://www.science.org/doi/10.1126/science.add2187) [code](https://github.com/dauparas/ProteinMPNN)
+- [Robust deep learning-based protein sequence design using ProteinMPNN](https://www.science.org/doi/10.1126/science.add2187) [code](https://github.com/dauparas/ProteinMPNN) ![Stars](https://img.shields.io/github/stars/dauparas/ProteinMPNN?style=flat&label=)
   - Dauparas et al. · University of Washington (Baker Lab) · Science 2022
   - Keywords: fixed-backbone design, message-passing, structure-conditioned
 ```
 
 ## The Highlight badge
 
-Within a **Recent** sub-section, maintainers may add a
-`![Highlight](https://img.shields.io/badge/-Highlight-blue)` badge before the
-title of a paper they consider especially significant:
+Maintainers may add a `![Highlight](https://img.shields.io/badge/-Highlight-blue)`
+badge before the title of a paper they consider especially significant —
+landmark, field-defining, or otherwise a must-read:
 
 ```
 - ![Highlight](https://img.shields.io/badge/-Highlight-blue) [Title](link) [code](code-link)
@@ -48,9 +48,11 @@ title of a paper they consider especially significant:
   - Keywords: ...
 ```
 
-This is an editorial call, not a benchmark/SOTA claim — use sparingly (at
-most one or two per section) and only propose it via PR discussion, not as
-part of a routine paper addition.
+This is an editorial call, not a benchmark/SOTA claim — it does not imply
+other unbadged papers are unimportant. Use it for papers that set a
+direction, defined a sub-field, or are simply must-reads for newcomers,
+regardless of publication date. Propose new Highlight badges via PR
+discussion rather than adding them as part of a routine paper addition.
 
 ## Adding a new section
 
