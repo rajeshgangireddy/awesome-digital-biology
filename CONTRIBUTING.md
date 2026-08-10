@@ -19,19 +19,19 @@ Thanks for helping make this the go-to list for AI-driven digital biology! 🎉
 ## Entry format
 
 ```
-- [Title](paper-or-repo-link) [code](code-link-if-different) ![Stars](https://img.shields.io/github/stars/owner/repo?style=flat&label=)
+- [Title](paper-or-repo-link) [code](code-link-if-different) ![Stars](https://img.shields.io/github/stars/owner/repo?style=social)
   - Authors (first author et al.) · Institution/Company · Venue/Year
   - Keywords: keyword1, keyword2, keyword3
 ```
 
 The `![Stars]` badge is optional but recommended whenever the resource has a
-public GitHub repo — use the shields.io dynamic badge (`?style=flat&label=`)
+public GitHub repo — use the shields.io dynamic badge (`?style=social`)
 so the count stays up to date automatically; don't hardcode a star number.
 
 Example:
 
 ```
-- [Robust deep learning-based protein sequence design using ProteinMPNN](https://www.science.org/doi/10.1126/science.add2187) [code](https://github.com/dauparas/ProteinMPNN) ![Stars](https://img.shields.io/github/stars/dauparas/ProteinMPNN?style=flat&label=)
+- [Robust deep learning-based protein sequence design using ProteinMPNN](https://www.science.org/doi/10.1126/science.add2187) [code](https://github.com/dauparas/ProteinMPNN) ![Stars](https://img.shields.io/github/stars/dauparas/ProteinMPNN?style=social)
   - Dauparas et al. · University of Washington (Baker Lab) · Science 2022
   - Keywords: fixed-backbone design, message-passing, structure-conditioned
 ```
