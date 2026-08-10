@@ -19,16 +19,16 @@ Thanks for helping make this the go-to list for AI-driven digital biology! 🎉
 ## Entry format
 
 ```
-- [Title](paper-or-repo-link) [[code]](code-link-if-different)
-  - Authors (first author et al.) · Venue/Year
+- [Title](paper-or-repo-link) [code](code-link-if-different)
+  - Authors (first author et al.) · Institution/Company · Venue/Year
   - Keywords: keyword1, keyword2, keyword3
 ```
 
 Example:
 
 ```
-- [Robust deep learning-based protein sequence design using ProteinMPNN](https://www.science.org/doi/10.1126/science.add2187) [[code]](https://github.com/dauparas/ProteinMPNN)
-  - Dauparas et al. · Science 2022
+- [Robust deep learning-based protein sequence design using ProteinMPNN](https://www.science.org/doi/10.1126/science.add2187) [code](https://github.com/dauparas/ProteinMPNN)
+  - Dauparas et al. · University of Washington (Baker Lab) · Science 2022
   - Keywords: fixed-backbone design, message-passing, structure-conditioned
 ```
 
