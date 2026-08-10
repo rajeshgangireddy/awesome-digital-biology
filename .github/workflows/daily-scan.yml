@@ -1,0 +1,58 @@
+name: Daily Paper Scan
+
+on:
+  schedule:
+    # Runs at 06:00 UTC every 2 days
+    - cron: '0 6 */2 * *'
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -r scripts/requirements.txt
+
+      - name: Run scanner
+        run: python scripts/fetch_papers.py
+
+      - name: Check for changes
+        id: git-check
+        run: |
+          if git diff --quiet -- docs/staging/recent-papers.md; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Create Pull Request
+        if: steps.git-check.outputs.changed == 'true'
+        uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "chore(bot): scan for new papers"
+          branch: bot/paper-scan
+          delete-branch: true
+          title: "🔬 New papers found by scheduled scan"
+          body: |
+            Automated scan found new candidate papers. They have been added to
+            `docs/staging/recent-papers.md` for human triage.
+
+            Please review and either:
+            - move strong entries into the correct permanent `README.md` section
+              using the standard entry format, or
+            - close this PR / delete irrelevant entries.
+          labels: |
+            bot:new-papers

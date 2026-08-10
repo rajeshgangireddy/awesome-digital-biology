@@ -1,0 +1,46 @@
+# Keyword filters per category. The scanner queries arXiv/bioRxiv for these
+# terms (OR'd together within a category) and tags matches with the category
+# name so they can be grouped in the staging file.
+
+sources:
+  arxiv:
+    categories: ["q-bio.BM", "q-bio.QM", "q-bio.GN", "q-bio.PE", "cs.LG"]
+  biorxiv:
+    categories: ["biophysics", "bioinformatics", "synthetic-biology", "molecular-biology"]
+
+lookback_days: 3   # overlap slightly beyond the 2-day cron interval, dedup handles repeats
+
+categories:
+  "Protein Structure Prediction":
+    - "protein structure prediction"
+    - "AlphaFold"
+    - "protein folding deep learning"
+
+  "Protein & Binder/Antibody Design":
+    - "protein design deep learning"
+    - "binder design"
+    - "antibody design generative"
+    - "RFdiffusion"
+    - "ProteinMPNN"
+    - "de novo protein design"
+
+  "Molecular Generation & Drug Discovery":
+    - "molecular generation diffusion"
+    - "drug discovery generative model"
+    - "small molecule generation deep learning"
+
+  "Genomics / DNA & RNA Foundation Models":
+    - "DNA foundation model"
+    - "RNA language model"
+    - "genomic language model"
+
+  "Single-Cell & Omics Foundation Models":
+    - "single-cell foundation model"
+    - "single cell transformer"
+    - "multi-omics foundation model"
+
+  "Multi-modal / Foundation Models for Biology":
+    - "biology foundation model"
+    - "multimodal protein model"
+
+max_results_per_category: 15
