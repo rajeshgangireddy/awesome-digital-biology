@@ -7,10 +7,15 @@
 > protein/binder/antibody design, molecular generation, genomics & single-cell
 > foundation models, and the software that powers them.
 
+
 Why this list exists: the AI-for-biology space is exploding, but resources are
-scattered across dozens of narrow, often-stale lists. This repo aims to be the
+scattered across dozens of narrow, often-stale lists. 
+Most of the existing "awesome" repos for digital biology are not maintained. 
+
+
+This repo aims to be the
 **single go-to hub** — broad in scope, strict in curation, and kept fresh via
-an automated scanning bot that proposes new papers every 2 days (see
+an automated scanning bot that creates a PR for new papers every 2 days (see
 [Recent Papers](docs/staging/recent-papers.md), triaged into the sections
 below by maintainers/contributors).
 
