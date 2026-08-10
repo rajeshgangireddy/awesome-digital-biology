@@ -1,0 +1,39 @@
+name: 🔬 New Resource
+description: Suggest a paper, tool, dataset, or model to add to the list
+title: "[Resource] "
+labels: ["resource-suggestion"]
+body:
+  - type: input
+    id: title
+    attributes:
+      label: Resource title
+    validations:
+      required: true
+  - type: input
+    id: link
+    attributes:
+      label: Link (paper / repo / dataset)
+    validations:
+      required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options:
+        - Protein Structure Prediction
+        - Protein & Binder/Antibody Design
+        - Molecular Generation & Drug Discovery
+        - Genomics / DNA & RNA Foundation Models
+        - Single-Cell & Omics Foundation Models
+        - Multi-modal / Foundation Models for Biology
+        - Datasets & Benchmarks
+        - Tools, Libraries & Servers
+        - Other / Not sure
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why should this be included?
+    validations:
+      required: false
