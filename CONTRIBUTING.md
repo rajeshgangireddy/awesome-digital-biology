@@ -38,12 +38,12 @@ Example:
 
 ## The Highlight badge
 
-Maintainers may add a `![Highlight](https://img.shields.io/badge/-Highlight-blue)`
+Maintainers may add a `![Highlight](https://img.shields.io/badge/-Highlight-orange)`
 badge before the title of a paper they consider especially significant —
 landmark, field-defining, or otherwise a must-read:
 
 ```
-- ![Highlight](https://img.shields.io/badge/-Highlight-blue) [Title](link) [code](code-link)
+- ![Highlight](https://img.shields.io/badge/-Highlight-orange) [Title](link) [code](code-link)
   - Authors · Institution/Company · Venue/Year
   - Keywords: ...
 ```
