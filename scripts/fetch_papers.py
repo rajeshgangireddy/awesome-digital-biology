@@ -54,7 +54,16 @@ def save_seen(seen):
 
 def query_arxiv(keyword, categories, max_results, since):
     cat_query = " OR ".join(f"cat:{c}" for c in categories)
-    kw_query = f'all:"{keyword}"'
+    # Use an AND-of-terms match rather than a literal quoted phrase: exact
+    # phrase matching is too restrictive (few abstracts contain a 3-4 word
+    # phrase verbatim) and was causing the scanner to find almost nothing.
+    # Requiring all words present (in any order/position) is much more
+    # permissive while still filtering on topical relevance.
+    words = keyword.split()
+    if len(words) > 1:
+        kw_query = " AND ".join(f"all:{w}" for w in words)
+    else:
+        kw_query = f"all:{keyword}"
     query = f"({kw_query}) AND ({cat_query})"
     params = {
         "search_query": query,
