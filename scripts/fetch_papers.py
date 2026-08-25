@@ -74,11 +74,23 @@ def query_arxiv(keyword, categories, max_results, since):
     }
     url = f"{ARXIV_API}?{urllib.parse.urlencode(params)}"
     req = urllib.request.Request(url, headers={"User-Agent": "awesome-digital-biology-bot/1.0"})
-    try:
-        with urllib.request.urlopen(req, timeout=30) as resp:
-            data = resp.read()
-    except Exception as e:
-        print(f"  [warn] arXiv query failed for '{keyword}': {e}", file=sys.stderr)
+
+    # arXiv rate-limits fairly aggressively; a single 429/timeout shouldn't
+    # silently look identical to "genuinely no results". Retry a couple of
+    # times with backoff before giving up on this keyword.
+    data = None
+    last_err = None
+    for attempt in range(3):
+        try:
+            with urllib.request.urlopen(req, timeout=30) as resp:
+                data = resp.read()
+            break
+        except Exception as e:
+            last_err = e
+            if attempt < 2:
+                time.sleep(10 * (attempt + 1))
+    if data is None:
+        print(f"  [warn] arXiv query failed for '{keyword}' after retries: {last_err}", file=sys.stderr)
         return []
 
     ns = {"atom": "http://www.w3.org/2005/Atom"}
@@ -169,7 +181,7 @@ def main():
                 if r["id"] not in seen:
                     found.append(r)
                     seen.add(r["id"])
-            time.sleep(3)  # be polite to the arXiv API
+            time.sleep(5)  # be polite to the arXiv API
         # de-dup within category by id, keep order
         dedup = {r["id"]: r for r in found}
         new_by_category[category] = list(dedup.values())
