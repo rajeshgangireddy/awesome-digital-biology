@@ -1,6 +1,8 @@
-# Keyword filters per category. The scanner queries arXiv/bioRxiv for these
+# Keyword filters per category. The scanner queries arXiv and bioRxiv for these
 # terms (OR'd together within a category) and tags matches with the category
-# name so they can be grouped in the staging file.
+# name so they can be grouped in the staging file. For bioRxiv, the source
+# categories below are filtered first, then these keywords are matched against
+# each paper's title and abstract.
 
 sources:
   arxiv:

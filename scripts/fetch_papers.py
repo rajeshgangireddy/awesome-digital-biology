@@ -1,9 +1,9 @@
 """
 fetch_papers.py
 
-Scans arXiv (and, best-effort, bioRxiv) for new papers matching the keyword
-filters in config.yaml, deduplicates against data/seen.json, and appends new
-candidates to docs/staging/recent-papers.md grouped by category.
+Scans arXiv and bioRxiv for new papers matching the keyword filters in
+config.yaml, deduplicates against data/seen.json, and appends new candidates
+to docs/staging/recent-papers.md grouped by category.
 
 This script is intentionally dependency-light (stdlib + PyYAML + requests)
 so it runs cheaply inside a GitHub Actions job. It does NOT call any LLM by
@@ -31,6 +31,7 @@ SEEN_PATH = os.path.join(ROOT, "data", "seen.json")
 STAGING_PATH = os.path.join(ROOT, "docs", "staging", "recent-papers.md")
 
 ARXIV_API = "http://export.arxiv.org/api/query"
+BIORXIV_API = "https://api.biorxiv.org/details/biorxiv/{start}/{end}/{cursor}/json"
 
 
 def load_config():
@@ -118,6 +119,99 @@ def query_arxiv(keyword, categories, max_results, since):
     return entries
 
 
+def keyword_matches(text, keyword):
+    """Match all terms in a keyword, regardless of their order."""
+    text = text.casefold()
+    return all(word.casefold() in text for word in keyword.split())
+
+
+def query_biorxiv(source_categories, category_keywords, max_results, since):
+    """Fetch recent bioRxiv records and group keyword matches by list category."""
+    start = since.date().isoformat()
+    end = datetime.now(timezone.utc).date().isoformat()
+    wanted_sources = {category.casefold() for category in source_categories}
+    matches = {category: [] for category in category_keywords}
+    cursor = 0
+
+    while True:
+        url = BIORXIV_API.format(start=start, end=end, cursor=cursor)
+        data = None
+        last_err = None
+        for attempt in range(3):
+            try:
+                req = urllib.request.Request(
+                    url,
+                    headers={"User-Agent": "awesome-digital-biology-bot/1.0"},
+                )
+                with urllib.request.urlopen(req, timeout=30) as resp:
+                    data = json.load(resp)
+                break
+            except Exception as e:
+                last_err = e
+                if attempt < 2:
+                    time.sleep(10 * (attempt + 1))
+
+        if data is None:
+            print(
+                f"  [warn] bioRxiv query failed at cursor {cursor} after retries: {last_err}",
+                file=sys.stderr,
+            )
+            break
+
+        collection = data.get("collection", [])
+        if not collection:
+            break
+
+        for paper in collection:
+            if paper.get("category", "").casefold() not in wanted_sources:
+                continue
+            title = " ".join(paper.get("title", "").split())
+            abstract = " ".join(paper.get("abstract", "").split())
+            searchable = f"{title} {abstract}"
+            matching_category = next(
+                (
+                    category
+                    for category, keywords in category_keywords.items()
+                    if any(keyword_matches(searchable, keyword) for keyword in keywords)
+                ),
+                None,
+            )
+            if matching_category is None:
+                continue
+
+            doi = paper.get("doi", "").strip()
+            if not doi:
+                continue
+            authors = [
+                author.strip()
+                for author in paper.get("authors", "").split(";")
+                if author.strip()
+            ]
+            matches[matching_category].append(
+                {
+                    "id": f"https://doi.org/{doi}",
+                    "title": title,
+                    "summary": abstract,
+                    "authors": authors,
+                    "published": paper.get("date", ""),
+                    "link": f"https://doi.org/{doi}",
+                    "source": "bioRxiv",
+                    "institution": paper.get("author_corresponding_institution", ""),
+                }
+            )
+
+        message = data.get("messages", [{}])[0]
+        total = int(message.get("count_new_papers", "0"))
+        cursor += len(collection)
+        if cursor >= total:
+            break
+        time.sleep(1)
+
+    return {
+        category: papers[:max_results] for category, papers in matches.items()
+    }
+
+
 def slugify_category(name):
     return re.sub(r"[^a-z0-9]+", "-", name.lower()).strip("-")
 
@@ -125,9 +219,12 @@ def slugify_category(name):
 def render_entry(paper):
     authors = paper["authors"]
     author_str = authors[0] + " et al." if len(authors) > 1 else (authors[0] if authors else "Unknown")
+    source = paper.get("source", "arXiv")
+    institution = paper.get("institution", "")
+    affiliation = f" · {institution}" if institution else ""
     return (
         f"- [{paper['title']}]({paper['link']})\n"
-        f"  - {author_str} · arXiv {paper['published']}\n"
+        f"  - {author_str}{affiliation} · {source} {paper['published']}\n"
         f"  - Keywords: _unreviewed_\n"
     )
 
@@ -171,8 +268,15 @@ def main():
     since = datetime.now(timezone.utc) - timedelta(days=lookback_days)
     max_results = config.get("max_results_per_category", 15)
     arxiv_categories = config["sources"]["arxiv"]["categories"]
+    biorxiv_config = config["sources"].get("biorxiv", {})
 
     new_by_category = {}
+    biorxiv_matches = query_biorxiv(
+        biorxiv_config.get("categories", []),
+        config["categories"],
+        max_results,
+        since,
+    )
     for category, keywords in config["categories"].items():
         found = []
         for kw in keywords:
@@ -182,6 +286,10 @@ def main():
                     found.append(r)
                     seen.add(r["id"])
             time.sleep(5)  # be polite to the arXiv API
+        for r in biorxiv_matches.get(category, []):
+            if r["id"] not in seen:
+                found.append(r)
+                seen.add(r["id"])
         # de-dup within category by id, keep order
         dedup = {r["id"]: r for r in found}
         new_by_category[category] = list(dedup.values())
