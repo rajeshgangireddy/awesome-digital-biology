@@ -7,25 +7,5 @@
 > - delete stale/irrelevant entries from this file.
 
 <!-- BOT:START -->
-
-### Scan on 2026-08-29
-
-#### Protein Structure Prediction
-
-- [Reservoir: A Large-Scale Simulated Dataset for Training and Evaluating Epidemiological Models](http://arxiv.org/abs/2608.27408v1)
-  - Carson Dudley et al. · arXiv 2026-08-27
-  - Keywords: _unreviewed_
-- [RegimeFormer: A Large Protein Model of Global Perturbation Regimes](http://arxiv.org/abs/2608.26586v1)
-  - Siyuan Ma et al. · arXiv 2026-08-27
-  - Keywords: _unreviewed_
-- [Interpreting Latent Protein Language Model Features with Geometric Annotations](http://arxiv.org/abs/2608.26419v1)
-  - Siddharth Setlur et al. · arXiv 2026-08-26
-  - Keywords: _unreviewed_
-
-#### Multi-modal / Foundation Models for Biology
-
-- [PathoMIC: A Benchmark for Cross-Species Antimicrobial Peptide Activity Prediction](http://arxiv.org/abs/2608.26228v1)
-  - Yeqing Lu et al. · arXiv 2026-08-26
-  - Keywords: _unreviewed_
-
+_No entries yet — the scanner will populate this file on its next run._
 <!-- BOT:END -->
