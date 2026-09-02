@@ -24,6 +24,7 @@ Contributions welcome — see [CONTRIBUTING.md](CONTRIBUTING.md).
 - [Genomics / DNA & RNA Foundation Models](#genomics--dna--rna-foundation-models)
 - [Single-Cell & Omics Foundation Models](#single-cell--omics-foundation-models)
 - [Multi-modal / Foundation Models for Biology](#multi-modal--foundation-models-for-biology)
+- [Skills and Agents](#skills-and-agents)
 - [Datasets & Benchmarks](#datasets--benchmarks)
 - [Tools, Libraries & Servers](#tools-libraries--servers)
 - [Labs, Companies & Communities](#labs-companies--communities)
@@ -107,6 +108,8 @@ quality guarantees.
 
 | Project / work | Links | Year | Authors / organization | Notes |
 |---|---|---:|---|---|
+| ![Highlight](https://img.shields.io/badge/-Highlight-orange) **Evo 2** — Genome foundation model at billion-to-trillion-base scale | [paper](https://doi.org/10.1038/s41586-026-10176-5) · [code](https://github.com/ArcInstitute/evo2) ![Stars](https://img.shields.io/github/stars/ArcInstitute/evo2?style=social) · [project](https://arcinstitute.org/tools/evo) | 2026 | Arc Institute | Approximately 9T DNA tokens; up to 1M-base context |
+| ![Highlight](https://img.shields.io/badge/-Highlight-orange) **AlphaGenome** — Regulatory genomics model and ecosystem | <br>- API: [project](https://deepmind.google.com/science/alphagenome) · [client](https://github.com/google-deepmind/alphagenome) ![Stars](https://img.shields.io/github/stars/google-deepmind/alphagenome?style=social)<br>- Research: [code](https://github.com/google-deepmind/alphagenome_research) ![Stars](https://img.shields.io/github/stars/google-deepmind/alphagenome_research?style=social)<br>- PyTorch port: [code](https://github.com/genomicsxai/alphagenome-pytorch) ![Stars](https://img.shields.io/github/stars/genomicsxai/alphagenome-pytorch?style=social) | 2025 | Google DeepMind; community port by GenomicsXAI | Expression, splicing, chromatin, TF binding, variant effects; the PyTorch port is unofficial |
 | ![Highlight](https://img.shields.io/badge/-Highlight-orange) **Evo** — DNA foundation modeling from molecular to genome scale | [paper](https://www.science.org/doi/10.1126/science.ado9336) · [code](https://github.com/evo-design/evo) ![Stars](https://img.shields.io/github/stars/evo-design/evo?style=social) | 2024 | Nguyen et al. · Arc Institute & Stanford University | Long-context genomic model, generative DNA design |
 | **Nucleotide Transformer** — Building and evaluating robust genomic foundation models | [paper](https://www.nature.com/articles/s41592-024-02523-z) · [code](https://github.com/instadeepai/nucleotide-transformer) ![Stars](https://img.shields.io/github/stars/instadeepai/nucleotide-transformer?style=social) | 2024 | Dalla-Torre et al. · InstaDeep, NVIDIA & TU Munich | Genomic foundation model |
 | ![Highlight](https://img.shields.io/badge/-Highlight-orange) **DNABERT** — Pre-trained bidirectional representations for DNA language | [paper](https://academic.oup.com/bioinformatics/article/37/15/2112/6128680) · [code](https://github.com/jerryji1993/DNABERT) ![Stars](https://img.shields.io/github/stars/jerryji1993/DNABERT?style=social) | 2021 | Ji et al. · Northwestern University & Stony Brook University | DNA language model, genome representation |
@@ -120,6 +123,9 @@ quality guarantees.
 
 | Project / work | Links | Year | Authors / organization | Notes |
 |---|---|---:|---|---|
+| **Stack** — In-context learning for single-cell perturbation prediction | [code](https://github.com/ArcInstitute/stack) ![Stars](https://img.shields.io/github/stars/ArcInstitute/stack?style=social) · [preprint](https://www.biorxiv.org/content/10.64898/2026.01.09.698608v1) | 2026 | Arc Institute | Single-cell foundation model; peer review pending |
+| **STATE** — Predicting cellular responses to perturbations | [code](https://github.com/ArcInstitute/state) ![Stars](https://img.shields.io/github/stars/ArcInstitute/state?style=social) · [project](https://arcinstitute.org/tools/state) | 2025 | Arc Institute | Virtual-cell model for genetic, drug, and cytokine perturbations |
+| **cell-eval** — Evaluation suite for perturbation models | [code](https://github.com/ArcInstitute/cell-eval) ![Stars](https://img.shields.io/github/stars/ArcInstitute/cell-eval?style=social) | — | Arc Institute | Metrics, baselines, data-ceiling estimation, and challenge-compatible evaluation |
 | **scGPT** — Toward building a foundation model for single-cell multi-omics using generative AI | [paper](https://www.nature.com/articles/s41592-024-02201-0) · [code](https://github.com/bowang-lab/scGPT) ![Stars](https://img.shields.io/github/stars/bowang-lab/scGPT?style=social) | 2024 | Cui et al. · University of Toronto | Single-cell, generative pretraining, multi-omics |
 | ![Highlight](https://img.shields.io/badge/-Highlight-orange) **Geneformer** — Transfer learning enables predictions in network biology | [paper](https://www.nature.com/articles/s41586-023-06139-9) · [code](https://huggingface.co/ctheodoris/Geneformer) | 2023 | Theodoris et al. · Harvard Medical School & Boston Children's Hospital | Gene network, transfer learning, single-cell |
 
@@ -132,7 +138,20 @@ quality guarantees.
 
 | Project / work | Links | Year | Authors / organization | Notes |
 |---|---|---:|---|---|
+| **BioReason** — Multimodal protein-function reasoning with GO-GPT | [paper](https://bioreason.net/paper) · [app](https://app.bioreason.net/auth?callbackUrl=https%3A%2F%2Fapp.bioreason.net%2F) | 2026 | BioReason team | Protein-function prediction, structured reasoning, functional summaries |
 | ![Highlight](https://img.shields.io/badge/-Highlight-orange) **ESM3** — Simulating 500 million years of evolution with a language model | [paper](https://www.science.org/doi/10.1126/science.ado9336) · [code](https://github.com/evolutionaryscale/esm) ![Stars](https://img.shields.io/github/stars/evolutionaryscale/esm?style=social) | 2025 | Hayes et al. · EvolutionaryScale | Multimodal, sequence-structure-function, generative |
+
+</details>
+
+## Skills and Agents
+
+<details open>
+<summary>Scientific skills and agents</summary>
+
+| Project / work | Links | Year | Authors / organization | Notes |
+|---|---|---:|---|---|
+| **Google DeepMind Science Skills** — Scientific agent skills and tool integrations | [code](https://github.com/google-deepmind/science-skills) ![Stars](https://img.shields.io/github/stars/google-deepmind/science-skills?style=social) | — | Google DeepMind | Skills for AlphaGenome, AlphaFold DB, UniProt, genomics, chemistry, and scientific search |
+| **SRAgent** — LLM-assisted SRA curation | [code](https://github.com/ArcInstitute/SRAgent) ![Stars](https://img.shields.io/github/stars/ArcInstitute/SRAgent?style=social) · [paper](https://www.biorxiv.org/content/10.1101/2025.02.27.640494v1) | 2025 | Arc Institute | Extracts metadata and discovers linked studies for atlas-scale biology |
 
 </details>
 
@@ -143,6 +162,9 @@ quality guarantees.
 
 | Project / work | Links | Year | Authors / organization | Notes |
 |---|---|---:|---|---|
+| **OpenGenome2** — Genomic pretraining dataset | [dataset](https://huggingface.co/datasets/arcinstitute/opengenome2) | — | Arc Institute | Large all-domain-of-life genomic corpus used for Evo 2 |
+| **Arc Virtual Cell Atlas** — Atlas-scale single-cell data platform | [code](https://github.com/ArcInstitute/arc-virtual-cell-atlas) ![Stars](https://img.shields.io/github/stars/ArcInstitute/arc-virtual-cell-atlas?style=social) · [project](https://arcinstitute.org/tools/virtualcellatlas) · [dataset](https://lamin.ai/laminlabs/arc-virtual-cell-atlas) | — | Arc Institute | Public data, Tahoe perturbation data, and challenge datasets |
+| **SynGenome** — Synthetic-DNA dataset | [project](https://evodesign.org/syngenome/) | — | EvolutionaryScale | Large synthetic DNA resource generated with Evo |
 | **Protein Data Bank (PDB)** | [dataset](https://www.rcsb.org/) | — | RCSB PDB | Experimental structures, gold-standard benchmark |
 | **AlphaFold Protein Structure Database** | [dataset](https://alphafold.ebi.ac.uk/) | — | EMBL-EBI & Google DeepMind | Predicted structures, whole-proteome coverage |
 | **CASP** — Critical Assessment of Structure Prediction | [benchmark](https://predictioncenter.org/) | — | CASP community | Community benchmark, blind prediction |
@@ -156,6 +178,7 @@ quality guarantees.
 
 | Project / work | Links | Year | Authors / organization | Notes |
 |---|---|---:|---|---|
+| **Proto** — Generative biology programming language | [paper](https://www.biorxiv.org/content/10.64898/2026.06.22.733870v1) · [project](https://proto.evodesign.org/landing) | 2026 | EvolutionaryScale / Arc Institute | Composes design primitives across DNA, RNA, proteins, ligands, and interactions |
 | **PyMOL** | [project](https://pymol.org/) · [code](https://github.com/schrodinger/pymol-open-source) ![Stars](https://img.shields.io/github/stars/schrodinger/pymol-open-source?style=social) | — | Schrödinger | Molecular visualization |
 | **ChimeraX** | [project](https://www.cgl.ucsf.edu/chimerax/) · [code](https://github.com/RBVI/ChimeraX) ![Stars](https://img.shields.io/github/stars/RBVI/ChimeraX?style=social) | — | UCSF RBVI | Molecular visualization |
 | **Biotite** | [project](https://github.com/biotite-dev/biotite) · [code](https://github.com/biotite-dev/biotite) ![Stars](https://img.shields.io/github/stars/biotite-dev/biotite?style=social) | — | Biotite contributors | Computational structural biology library |
