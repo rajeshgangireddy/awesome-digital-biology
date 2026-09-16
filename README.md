@@ -141,6 +141,7 @@ quality guarantees.
 |---|---|---:|---|---|
 | **BioReason** — Multimodal protein-function reasoning with GO-GPT | [paper](https://bioreason.net/paper) · [app](https://app.bioreason.net/auth?callbackUrl=https%3A%2F%2Fapp.bioreason.net%2F) | 2026 | BioReason team | Protein-function prediction, structured reasoning, functional summaries |
 | ![Highlight](https://img.shields.io/badge/-Highlight-orange) **ESM3** — Simulating 500 million years of evolution with a language model | [paper](https://www.science.org/doi/10.1126/science.ado9336) · [code](https://github.com/evolutionaryscale/esm) ![Stars](https://img.shields.io/github/stars/evolutionaryscale/esm?style=social) | 2025 | Hayes et al. · EvolutionaryScale | Multimodal, sequence-structure-function, generative |
+| **MAMMAL** — Multi-modal biomedical foundation model | [paper](https://arxiv.org/abs/2410.22367) · [code](https://github.com/BiomedSciAI/biomed-multi-alignment) ![Stars](https://img.shields.io/github/stars/BiomedSciAI/biomed-multi-alignment?style=social) · [model](https://huggingface.co/ibm/biomed.omics.bl.sm.ma-ted-458m) | 2024 | Shoshan et al. · IBM Research | Unified promptable pretraining across proteins, small molecules, and single-cell gene expression |
 
 </details>
 
@@ -151,6 +152,7 @@ quality guarantees.
 
 | Project / work | Links | Year | Authors / organization | Notes |
 |---|---|---:|---|---|
+| **ClawBio** — Bioinformatics-native AI agent skill library | [code](https://github.com/ClawBio/ClawBio) ![Stars](https://img.shields.io/github/stars/ClawBio/ClawBio?style=social) · [project](https://clawbio.ai/) | 2026 | ClawBio contributors | Local-first, reproducible agent skills for genomics, pharmacogenomics, single-cell, and bioinformatics workflows |
 | **Google DeepMind Science Skills** — Scientific agent skills and tool integrations | [code](https://github.com/google-deepmind/science-skills) ![Stars](https://img.shields.io/github/stars/google-deepmind/science-skills?style=social) | — | Google DeepMind | Skills for AlphaGenome, AlphaFold DB, UniProt, genomics, chemistry, and scientific search |
 | **SRAgent** — LLM-assisted SRA curation | [code](https://github.com/ArcInstitute/SRAgent) ![Stars](https://img.shields.io/github/stars/ArcInstitute/SRAgent?style=social) · [paper](https://www.biorxiv.org/content/10.1101/2025.02.27.640494v1) | 2025 | Arc Institute | Extracts metadata and discovers linked studies for atlas-scale biology |
 
@@ -163,6 +165,7 @@ quality guarantees.
 
 | Project / work | Links | Year | Authors / organization | Notes |
 |---|---|---:|---|---|
+| **Terminal-Bench-Science** — Benchmark for AI agents on scientific workflows | [benchmark](https://www.terminal-bench-science.ai/) · [code](https://github.com/harbor-framework/terminal-bench-science) ![Stars](https://img.shields.io/github/stars/harbor-framework/terminal-bench-science?style=social) · [dataset](https://doi.org/10.5281/zenodo.22110253) | 2026 | Terminal-Bench-Science team · Stanford, Harbor & Laude Institute | Expert-curated agent tasks across scientific domains, including life-science workflows |
 | **OpenGenome2** — Genomic pretraining dataset | [dataset](https://huggingface.co/datasets/arcinstitute/opengenome2) | — | Arc Institute | Large all-domain-of-life genomic corpus used for Evo 2 |
 | **Arc Virtual Cell Atlas** — Atlas-scale single-cell data platform | [code](https://github.com/ArcInstitute/arc-virtual-cell-atlas) ![Stars](https://img.shields.io/github/stars/ArcInstitute/arc-virtual-cell-atlas?style=social) · [project](https://arcinstitute.org/tools/virtualcellatlas) · [dataset](https://lamin.ai/laminlabs/arc-virtual-cell-atlas) | — | Arc Institute | Public data, Tahoe perturbation data, and challenge datasets |
 | **SynGenome** — Synthetic-DNA dataset | [project](https://evodesign.org/syngenome/) | — | EvolutionaryScale | Large synthetic DNA resource generated with Evo |
@@ -179,6 +182,7 @@ quality guarantees.
 
 | Project / work | Links | Year | Authors / organization | Notes |
 |---|---|---:|---|---|
+| **BioMCP** — Biomedical Model Context Protocol and CLI | [code](https://github.com/genomoncology/biomcp) ![Stars](https://img.shields.io/github/stars/genomoncology/biomcp?style=social) · [project](https://biomcp.org/) | 2026 | Genome Oncology | Unified CLI and MCP server for evidence-oriented search and analysis across biomedical data sources |
 | **Proto** — Generative biology programming language | [paper](https://www.biorxiv.org/content/10.64898/2026.06.22.733870v1) · [project](https://proto.evodesign.org/landing) | 2026 | EvolutionaryScale / Arc Institute | Composes design primitives across DNA, RNA, proteins, ligands, and interactions |
 | **PyMOL** | [project](https://pymol.org/) · [code](https://github.com/schrodinger/pymol-open-source) ![Stars](https://img.shields.io/github/stars/schrodinger/pymol-open-source?style=social) | — | Schrödinger | Molecular visualization |
 | **ChimeraX** | [project](https://www.cgl.ucsf.edu/chimerax/) · [code](https://github.com/RBVI/ChimeraX) ![Stars](https://img.shields.io/github/stars/RBVI/ChimeraX?style=social) | — | UCSF RBVI | Molecular visualization |
