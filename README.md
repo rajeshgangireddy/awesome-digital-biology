@@ -27,6 +27,7 @@ Contributions welcome — see [CONTRIBUTING.md](CONTRIBUTING.md).
 - [Skills and Agents](#skills-and-agents)
 - [Datasets & Benchmarks](#datasets--benchmarks)
 - [Tools, Libraries & Servers](#tools-libraries--servers)
+- [Platforms & Model Hubs](#platforms--model-hubs)
 - [Labs, Companies & Communities](#labs-companies--communities)
 - [Recent Papers (unreviewed, bot-updated)](docs/staging/recent-papers.md)
 - [Related Awesome Lists](#related-awesome-lists)
@@ -211,6 +212,17 @@ quality guarantees.
 | **ChimeraX** | [project](https://www.cgl.ucsf.edu/chimerax/) · [code](https://github.com/RBVI/ChimeraX) ![Stars](https://img.shields.io/github/stars/RBVI/ChimeraX?style=social) | — | UCSF RBVI | Molecular visualization |
 | **Biotite** | [project](https://github.com/biotite-dev/biotite) · [code](https://github.com/biotite-dev/biotite) ![Stars](https://img.shields.io/github/stars/biotite-dev/biotite?style=social) | — | Biotite contributors | Computational structural biology library |
 | **BioPython** | [project](https://github.com/biopython/biopython) · [code](https://github.com/biopython/biopython) ![Stars](https://img.shields.io/github/stars/biopython/biopython?style=social) | — | Biopython contributors | General bioinformatics toolkit |
+
+</details>
+
+## Platforms & Model Hubs
+
+<details open>
+<summary>Platforms and model ecosystems</summary>
+
+| Project / work | Links | Year | Authors / organization | Notes |
+|---|---|---:|---|---|
+| **PaddleHelix** — Bio-computing platform and model ecosystem | [project](https://paddlehelix.readthedocs.io/) · [code](https://github.com/PaddlePaddle/PaddleHelix) ![Stars](https://img.shields.io/github/stars/PaddlePaddle/PaddleHelix?style=social) | 2025 | PaddlePaddle / PaddleHelix team | Deep-learning platform for biological representation learning and multi-task prediction; includes the HelixFold family of protein structure models, including HelixFold3 |
 
 </details>
 
