@@ -181,7 +181,6 @@ quality guarantees.
 
 | Project / work | Links | Year | Authors / organization | Notes |
 |---|---|---:|---|---|
-| **BioMCP** — Biomedical Model Context Protocol and CLI | [code](https://github.com/genomoncology/biomcp) ![Stars](https://img.shields.io/github/stars/genomoncology/biomcp?style=social) · [project](https://biomcp.org/) | 2026 | Genome Oncology | Unified CLI and MCP server for evidence-oriented search and analysis across biomedical data sources |
 | **Proto** — Generative biology programming language | [paper](https://www.biorxiv.org/content/10.64898/2026.06.22.733870v1) · [project](https://proto.evodesign.org/landing) | 2026 | EvolutionaryScale / Arc Institute | Composes design primitives across DNA, RNA, proteins, ligands, and interactions |
 | **PyMOL** | [project](https://pymol.org/) · [code](https://github.com/schrodinger/pymol-open-source) ![Stars](https://img.shields.io/github/stars/schrodinger/pymol-open-source?style=social) | — | Schrödinger | Molecular visualization |
 | **ChimeraX** | [project](https://www.cgl.ucsf.edu/chimerax/) · [code](https://github.com/RBVI/ChimeraX) ![Stars](https://img.shields.io/github/stars/RBVI/ChimeraX?style=social) | — | UCSF RBVI | Molecular visualization |
