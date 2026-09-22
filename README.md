@@ -145,6 +145,7 @@ quality guarantees.
 |---|---|---:|---|---|
 | **BioReason** — Multimodal protein-function reasoning with GO-GPT | [paper](https://bioreason.net/paper) · [app](https://app.bioreason.net/auth?callbackUrl=https%3A%2F%2Fapp.bioreason.net%2F) | 2026 | BioReason team | Protein-function prediction, structured reasoning, functional summaries |
 | ![Highlight](https://img.shields.io/badge/-Highlight-orange) **ESM3** — Simulating 500 million years of evolution with a language model | [paper](https://www.science.org/doi/10.1126/science.ado9336) · [code](https://github.com/evolutionaryscale/esm) ![Stars](https://img.shields.io/github/stars/evolutionaryscale/esm?style=social) | 2025 | Hayes et al. · EvolutionaryScale | Multimodal, sequence-structure-function, generative |
+| **MAMMAL** — Multi-modal biomedical foundation model | [paper](https://arxiv.org/abs/2410.22367) · [code](https://github.com/BiomedSciAI/biomed-multi-alignment) ![Stars](https://img.shields.io/github/stars/BiomedSciAI/biomed-multi-alignment?style=social) · [model](https://huggingface.co/ibm/biomed.omics.bl.sm.ma-ted-458m) | 2024 | Shoshan et al. · IBM Research | Unified promptable pretraining across proteins, small molecules, and single-cell gene expression |
 
 </details>
 
@@ -167,6 +168,7 @@ quality guarantees.
 
 | Project / work | Links | Year | Authors / organization | Notes |
 |---|---|---:|---|---|
+| **Terminal-Bench-Science** — Benchmark for AI agents on scientific workflows | [benchmark](https://www.terminal-bench-science.ai/) · [code](https://github.com/harbor-framework/terminal-bench-science) ![Stars](https://img.shields.io/github/stars/harbor-framework/terminal-bench-science?style=social) · [dataset](https://doi.org/10.5281/zenodo.22110253) | 2026 | Terminal-Bench-Science team · Stanford, Harbor & Laude Institute | Expert-curated agent tasks across scientific domains, including life-science workflows |
 | **BixBench** — Benchmark for LLM-based agents in computational biology | [paper](https://arxiv.org/abs/2503.00096) · [code](https://github.com/Future-House/BixBench) ![Stars](https://img.shields.io/github/stars/Future-House/BixBench?style=social) · [dataset](https://huggingface.co/datasets/futurehouse/BixBench) | 2025 | FutureHouse & ScienceMachine | Open-ended bioinformatics tasks built from real-world analysis notebooks, with a public dataset and reproducible agent-evaluation harness |
 | **OpenGenome2** — Genomic pretraining dataset | [dataset](https://huggingface.co/datasets/arcinstitute/opengenome2) | — | Arc Institute | Large all-domain-of-life genomic corpus used for Evo 2 |
 | **Arc Virtual Cell Atlas** — Atlas-scale single-cell data platform | [code](https://github.com/ArcInstitute/arc-virtual-cell-atlas) ![Stars](https://img.shields.io/github/stars/ArcInstitute/arc-virtual-cell-atlas?style=social) · [project](https://arcinstitute.org/tools/virtualcellatlas) · [dataset](https://lamin.ai/laminlabs/arc-virtual-cell-atlas) | — | Arc Institute | Public data, Tahoe perturbation data, and challenge datasets |
