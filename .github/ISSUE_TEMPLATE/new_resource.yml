@@ -28,6 +28,7 @@ body:
         - Multi-modal / Foundation Models for Biology
         - Datasets & Benchmarks
         - Tools, Libraries & Servers
+        - Platforms & Model Hubs
         - Other / Not sure
     validations:
       required: true
