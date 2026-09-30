@@ -27,6 +27,7 @@ Contributions welcome — see [CONTRIBUTING.md](CONTRIBUTING.md).
 - [Skills and Agents](#skills-and-agents)
 - [Datasets & Benchmarks](#datasets--benchmarks)
 - [Tools, Libraries & Servers](#tools-libraries--servers)
+  - [Protein Structure Visualization](#protein-structure-visualization)
 - [Platforms & Model Hubs](#platforms--model-hubs)
 - [Labs, Companies & Communities](#labs-companies--communities)
 - [Recent Papers (unreviewed, bot-updated)](docs/staging/recent-papers.md)
@@ -221,6 +222,21 @@ quality guarantees.
 <details open>
 <summary>Tools, libraries, and servers</summary>
 
+### Protein Structure Visualization
+
+| Project / work | Links | Year | Authors / organization | Notes |
+|---|---|---:|---|---|
+| **Mol\*** — Web-based molecular visualization and analysis | [viewer](https://molstar.org/viewer/) · [code](https://github.com/molstar/molstar) ![Stars](https://img.shields.io/github/stars/molstar/molstar?style=social) | — | Mol\* contributors | MIT-licensed WebGL toolkit for interactive visualization and analysis of proteins, nucleic acids, ligands, experimental maps, and large molecular data |
+| **PyMOL** — Molecular visualization and scripting | [project](https://pymol.org/) · [code](https://github.com/schrodinger/pymol-open-source) ![Stars](https://img.shields.io/github/stars/schrodinger/pymol-open-source?style=social) | — | Schrödinger | Mature open-source molecular viewer with scripting, publication-quality rendering, selections, surfaces, measurements, and analysis workflows |
+| **ChimeraX** — Interactive molecular visualization and analysis | [project](https://www.rbvi.ucsf.edu/chimerax/) · [code](https://github.com/RBVI/ChimeraX) ![Stars](https://img.shields.io/github/stars/RBVI/ChimeraX?style=social) | — | UCSF RBVI | Full-featured desktop viewer for proteins, nucleic acids, maps, sequences, cryo-EM data, and volumes; free for academic, government, nonprofit, and personal use |
+| **VMD** — Visual Molecular Dynamics | [project](https://www.ks.uiuc.edu/Research/vmd/) | — | University of Illinois Urbana-Champaign | Free desktop tool for displaying, animating, and analyzing biomolecular systems, especially molecular-dynamics trajectories; commercial-use restrictions apply |
+| **NGL Viewer** — Web-based molecular graphics | [project](https://nglviewer.org/ngl/) · [code](https://github.com/nglviewer/ngl) ![Stars](https://img.shields.io/github/stars/nglviewer/ngl?style=social) | — | NGL contributors | MIT-licensed WebGL viewer for proteins, DNA/RNA, density volumes, trajectories, selections, animation, and embeddable JavaScript workflows |
+| **3Dmol.js** — WebGL molecular visualization library | [project](https://3dmol.org/) · [code](https://github.com/3dmol/3Dmol.js) ![Stars](https://img.shields.io/github/stars/3dmol/3Dmol.js?style=social) | — | 3Dmol.js contributors | BSD-3-Clause JavaScript library for embedding interactive 3D views of proteins, nucleic acids, small molecules, trajectories, and volumes |
+| **iCn3D** — Interactive 3D structure viewer | [project](https://www.ncbi.nlm.nih.gov/Structure/icn3d/) · [code](https://github.com/ncbi/icn3d) ![Stars](https://img.shields.io/github/stars/ncbi/icn3d?style=social) | — | NCBI | Web-based viewer with synchronized 3D, 2D interaction, and 1D sequence/annotation views, plus structure loading, alignments, contacts, and analysis |
+| **Coot** — Macromolecular model building and visualization | [project](https://www2.mrc-lmb.cam.ac.uk/personal/pemsley/coot/) · [code](https://github.com/pemsley/coot) ![Stars](https://img.shields.io/github/stars/pemsley/coot?style=social) | — | Paul Emsley · MRC Laboratory of Molecular Biology | Open-source crystallographic model-building and validation environment with interactive structure and map visualization; mixed GPL/LGPL components |
+
+### General Tools, Libraries & Servers
+
 | Project / work | Links | Year | Authors / organization | Notes |
 |---|---|---:|---|---|
 | **Fold-CP** — Context parallelism for biomolecular modeling | [paper](https://research.nvidia.com/labs/dbr/assets/data/manuscripts/fold_cp.pdf) · [code](https://github.com/NVIDIA-BioNeMo/boltz-cp) ![Stars](https://img.shields.io/github/stars/NVIDIA-BioNeMo/boltz-cp?style=social) | 2026 | NVIDIA BioNeMo | MIT-licensed, CUDA-focused distributed inference and training framework for Boltz-2 using data and context parallelism; proof-of-concept for multi-GPU large-complex modeling |
@@ -230,8 +246,6 @@ quality guarantees.
 | **Helical** — Framework for pretrained bio foundation models | [code](https://github.com/helicalAI/helical) ![Stars](https://img.shields.io/github/stars/helicalAI/helical?style=social) · [project](https://helical.readthedocs.io/) | 2026 | Helical team | Python framework for genomics, transcriptomics, and single-cell foundation models, with model cards, tutorials, and Helix-mRNA-v0 integration |
 | **AlphaFast** — High-throughput AlphaFold 3 inference with GPU-accelerated MSA search | [paper](https://www.biorxiv.org/content/10.64898/2026.02.17.706409v1) · [code](https://github.com/RomeroLab/alphafast) ![Stars](https://img.shields.io/github/stars/RomeroLab/alphafast?style=social) | 2026 | Perry et al. · Romero Lab, Duke University | Drop-in AF3 framework replacing CPU-bound JackHMMER with GPU-accelerated MMseqs2 for high-throughput inference; bioRxiv preprint |
 | **Proto** — Generative biology programming language | [paper](https://www.biorxiv.org/content/10.64898/2026.06.22.733870v1) · [project](https://proto.evodesign.org/landing) | 2026 | EvolutionaryScale / Arc Institute | Composes design primitives across DNA, RNA, proteins, ligands, and interactions |
-| **PyMOL** | [project](https://pymol.org/) · [code](https://github.com/schrodinger/pymol-open-source) ![Stars](https://img.shields.io/github/stars/schrodinger/pymol-open-source?style=social) | — | Schrödinger | Molecular visualization |
-| **ChimeraX** | [project](https://www.cgl.ucsf.edu/chimerax/) · [code](https://github.com/RBVI/ChimeraX) ![Stars](https://img.shields.io/github/stars/RBVI/ChimeraX?style=social) | — | UCSF RBVI | Molecular visualization |
 | **Biotite** | [project](https://github.com/biotite-dev/biotite) · [code](https://github.com/biotite-dev/biotite) ![Stars](https://img.shields.io/github/stars/biotite-dev/biotite?style=social) | — | Biotite contributors | Computational structural biology library |
 | **BioPython** | [project](https://github.com/biopython/biopython) · [code](https://github.com/biopython/biopython) ![Stars](https://img.shields.io/github/stars/biopython/biopython?style=social) | — | Biopython contributors | General bioinformatics toolkit |
 
