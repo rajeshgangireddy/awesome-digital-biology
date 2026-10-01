@@ -201,7 +201,7 @@ def query_biorxiv(source_categories, category_keywords, max_results, since):
             )
 
         message = data.get("messages", [{}])[0]
-        total = int(message.get("count_new_papers", "0"))
+        total = int(message["total"])
         cursor += len(collection)
         if cursor >= total:
             break
